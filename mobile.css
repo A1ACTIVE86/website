@@ -1,0 +1,72 @@
+
+body
+{
+    background-color: aqua;
+}
+.shownav {
+    height: 0.8em;
+    width: 1.25em;
+    display: block;
+     border-top: 0.2em solid rgb(223, 4, 4);
+    border-bottom: 0.2em solid rgb(199, 18, 18);
+     border-radius: 0.1em;
+     
+    }
+.shownav::before{
+      content: '';
+      position: absolute;
+      width: 1.25em;
+      margin: 0.3em;
+      border-top: 00.2em solid #fff;
+    }
+    nav {
+        display: none;
+        background-color: rgb(233, 19, 19);
+        position: fixed;
+        top: 0;
+        left: 50%;
+        width: 50%;
+        height: 100vh;
+       }
+       nav ul ul
+       {
+           position: absolute;
+           background-color: green;
+           padding: 0%;
+           display: block;
+           width: 100%;
+           opacity: 1;
+        transition: opacity 0.5s ease-in;
+       }
+
+       nav > ul > li:hover ul
+       {
+           opacity: 1;
+       }
+       
+   #clicked .on 
+   {
+       display: block;
+   }
+
+#clicked .off
+{
+    display: none;
+}
+
+#clicked:target .on
+{
+    display: none;
+}
+
+#clicked:target .off
+{
+    display: block;
+    color: rgb(223, 19, 19);
+}
+
+#clicked:target nav
+{
+    display: block;
+}
+
